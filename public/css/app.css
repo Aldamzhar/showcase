@@ -1,0 +1,216 @@
+:root {
+    --green: #127749;
+    --light-black: #212121;
+    --dark-grey: #707070;
+    --grey: #D6D6D4;
+    --light-grey: #f3f3f3;
+    --black: #000000;
+    --white: #FFFFFF;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: var(--white); /* Adjust the background color to white */
+}
+
+.logo-container .logo {
+    max-width: 150px; /* Adjust as needed */
+    height: auto;
+}
+
+.navbar .nav-list {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Adjust the spacing based on design */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+.navbar .nav-list .nav-item .nav-link {
+    text-decoration: none;
+    color: var(--light-black); /* Color adjusted to light black */
+    font-size: 16px; /* Example size, adjust as needed */
+    font-weight: bold;
+    text-transform: uppercase; /* If required by the design */
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.contact-container .contact-button {
+    padding: 10px 20px;
+    border: 2px solid var(--green); /* Adjust the border color to green */
+    background-color: transparent;
+    color: var(--green); /* Text color */
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    text-transform: uppercase; /* If required by the design */
+    font-size: 16px; /* Example size, adjust as needed */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.contact-container .contact-button:hover {
+    background-color: var(--green); /* Background color on hover */
+    color: var(--white); /* Text color on hover */
+}
+
+/* Responsive styles can be added to adjust the layout on smaller screens */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navbar .nav-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-container .contact-button {
+        width: 100%;
+    }
+}
+
+.text-component {
+    text-align: center; /* Centers the text */
+    padding: 20px; /* Adds padding around the text */
+}
+
+.text-component .experience {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 18px; /* This should be smaller than your h1, adjust as needed */
+    font-weight: normal;
+    margin-bottom: 5px; /* Adjust the space between this text and the title */
+}
+
+.text-component h1 {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 48px; /* Example size, adjust as needed */
+    font-weight: bold;
+    margin-top: 0; /* Removes the top margin */
+    margin-bottom: 15px; /* Adjust the space between the title and the paragraph */
+}
+
+.text-component p {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 18px; /* Example size, adjust as needed */
+    margin: 0; /* Removes the default margin from paragraphs */
+}
+
+.image-banner {
+    width: 100%; /* Ensures the banner takes full width of the container */
+    margin: 0 auto; /* Centers the banner if it's not already full width */
+    padding: 0; /* Removes any padding that might be present */
+    overflow: hidden; /* Ensures no overflow of the inner content */
+    display: block;
+}
+
+.image-banner img {
+    width: 100%; /* Ensures the image takes full width of its parent */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Removes any default inline spacing */
+    margin: 0; /* Removes any default margin */
+}
+
+/* Adjust the .watch-grid class */
+.watch-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three items per row */
+    gap: 30px; /* This sets the gap between the grid items */
+    margin: 0 auto; /* Center the grid within its container */
+    max-width: 1200px; /* Adjust the max-width as per the design requirements */
+    padding: 0 50px; /* Adds padding on the left and right */
+}
+
+/* Style for each watch */
+.watch {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Adjust the image style */
+.watch img {
+    width: 100%; /* Makes the image responsive */
+    max-width: 180px; /* Adjust this value to fit the design */
+    margin-bottom: 20px; /* Space between the image and the title */
+}
+
+/* Style the title (h2) and description (p) as needed */
+.watch h2 {
+    font-size: 16px; /* Adjust as per design requirements */
+    margin-bottom: 5px; /* Space between title and description */
+}
+
+.watch p {
+    font-size: 14px; /* Adjust as per design requirements */
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+    .watch-grid {
+        grid-template-columns: repeat(2, 1fr); /* Two items per row for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .watch-grid {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
+}
+
+.editorial-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns for the watches */
+    grid-template-rows: auto 1fr; /* Auto row for the title, 1fr for the watches */
+    gap: 30px;
+    margin-bottom: 50px; /* Space at the bottom */
+}
+
+.watch-selection {
+    position: relative;
+    text-align: center;
+}
+
+.watch-selection img {
+    width: 100%;
+    height: auto;
+    display: block; /* To ensure there's no extra space beneath the image */
+}
+
+.watch-selection h2 {
+    position: absolute;
+    bottom: 10px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%); /* Center the title horizontally */
+    width: 100%; /* Ensure the title width matches the image width */
+    font-size: 18px; /* Adjust as needed */
+}
+
+/* Adjust for larger screens if needed */
+@media (min-width: 1200px) {
+    .editorial-grid {
+        grid-template-columns: repeat(3, 1fr); /* Three columns for larger screens */
+    }
+}
+
+/* Adjust for smaller screens if needed */
+@media (max-width: 768px) {
+    .editorial-grid {
+        grid-template-columns: 1fr; /* Stack them on top of each other on small screens */
+    }
+
+    .watch-selection h2 {
+        position: relative;
+        left: 0;
+        transform: none;
+        margin-top: 10px; /* Provide some space between the image and the title */
+    }
+}
+
+
+
